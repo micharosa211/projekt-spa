@@ -1,0 +1,147 @@
+.main-header {
+    @include flexbox;
+    @include flex-align(flex-start, center);
+    height: 700px;
+    position: relative;
+
+    .header-description {
+        font-size: 16px;
+        color: $secondary-color;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        font-weight: 700;
+    }
+
+    h1 {
+        font-size: 50px;
+        color: #1e2528;
+        font-weight: 700;
+    }
+
+    .main-header-content {
+        color: $secondary-text-color;
+        font-size: 16px;
+    }
+
+    .buttons-panel {
+        margin: 40px;
+
+        .reserve {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 300;
+            color: #fff;
+            background-color: $primary-color;
+            padding: 14px 30px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $button-color;
+            }
+        }
+
+        .watch {
+
+            display: inline-block;
+            color: $secondary-color;
+            text-decoration: none;
+
+
+
+
+            i {
+                border: 1px solid $secondary-color;
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                margin-left: 25px;
+                margin-right: 25px;
+                transition: all .3s;
+
+
+
+            }
+        }
+
+    }
+
+
+    .flowers-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        z-index: 100000;
+        display: none;
+    }
+
+    .flowers {
+        position: absolute;
+        left: 0;
+        top: 35%;
+        max-width: 8%;
+        z-index: -1;
+
+
+    }
+
+    @media all and (min-width: $large) {
+
+        .main-header-holder {
+            width: 60%;
+
+        }
+
+        .flowers-bg {
+            display: block;
+
+            /* nie działa do konsultacji */
+            .flowers-bg {
+                width: 10%;
+            }
+        }
+    }
+
+    @media all and (min-width: $xlarge) {
+
+        /* nie działa do konsultacji */
+        .flowers-bg {
+            width: 40%;
+        }
+    }
+
+    @media all and (max-width: $extra-small) {
+
+        .watch {
+            margin-left: -27px;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+
+/* @keyframes resize {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    animation-name: resize;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} */

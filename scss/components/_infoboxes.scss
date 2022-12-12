@@ -1,0 +1,131 @@
+%common-infobox {
+    // margin: 0 10px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.infobox {
+    @extend %common-infobox;
+
+
+
+    .infobox-inner {
+        padding: 20px;
+        border: 1px solid #ebedf1;
+        border-radius: 2px;
+
+
+        &:hover {
+            box-shadow: 0 5px 20px #f0f0f0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn-secondary {
+            margin-bottom: 80px;
+        }
+        .meta {
+            font-size: 12px;
+         text-transform: uppercase;
+         margin-top: 15px;
+         margin-bottom: 0;
+         
+
+         .category {
+            margin-right: 5px;
+            text-decoration: none;
+            color: inherit;
+         }
+
+         .post-date {
+            margin-left: 5px;
+            text-decoration: none;
+            color: inherit;
+
+         }
+
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+.expirience {
+    @extend %common-infobox;
+    margin-top: 60px;
+    position: relative;
+
+p {
+    padding-bottom: 10px;
+}
+
+    img {
+        width: 100%;
+    }
+
+    .info-box-team-caption {
+        position: absolute;
+        width: 80%;
+        right: 0;
+        left: 0;
+        bottom: -50px;
+        margin: auto;
+        transition: all .3s;
+        background-color: #fff;
+
+        &:hover {
+            box-shadow: 0 5px 20px #f0f0f0;
+            padding-bottom: 30px;
+
+            &:hover .team-social-icons {
+                height: 45px;
+            }
+        }
+
+    }
+
+    .team-social-icons {
+        transform: all .3s;
+        height: 0;
+        overflow: hidden;
+
+        a {
+            height: 35px;
+            width: 35px;
+            font-size: 20px;
+            border: 1px solid $secondary-color;
+            color: $secondary-color;
+            line-height: 35px;
+            border-radius: 50%;
+            margin: 0 10px;
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+
+
+            &:hover {
+                border: 1px solid $primary-color;
+                color: #fff;
+                background-color: $primary-color;
+               
+
+            }
+            
+         
+          
+        }
+    }
+}
